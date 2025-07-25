@@ -34,7 +34,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 /*
 @Composable
 fun Greeting(name: String, context: Context) {
