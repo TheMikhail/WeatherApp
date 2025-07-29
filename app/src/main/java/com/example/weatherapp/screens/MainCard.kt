@@ -43,7 +43,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 
 @Composable
-fun MainCard(curentDay: MutableState<WeatherModel>) {
+fun MainCard(curentDay: MutableState<WeatherModel>, onClickSync: () -> Unit, onClickSearch: () -> Unit) {
     Log.d("Compose","MainCard")
     Column(
         modifier = Modifier
@@ -109,7 +109,7 @@ fun MainCard(curentDay: MutableState<WeatherModel>) {
                 ) {
                     IconButton(
                         onClick = {
-
+                            onClickSearch.invoke()
                         }) {
                         Icon(
                             painter = painterResource(R.drawable.search),
@@ -124,7 +124,7 @@ fun MainCard(curentDay: MutableState<WeatherModel>) {
                     )
                     IconButton(
                         onClick = {
-
+                            onClickSync.invoke()
                         }) {
                         Icon(
                             painter = painterResource(R.drawable.sync),
